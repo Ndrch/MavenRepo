@@ -30,7 +30,7 @@ public class KredytBudynok {
 		if (vydkredytu == 1) {
 			povidomlennja1(term, vidsotok, tilokr);
 		} else {
-			///////
+			/////////
 		}
 
 	}
