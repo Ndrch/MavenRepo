@@ -15,7 +15,7 @@ public class ArrayLoto {
 		for (int i = 0; i < lotto.length; i++)
 		{
 			int sumachyselRozigrashu = 0;
-		 // for (int j = 0; j < lotto[i].length; j++)
+		 
 			for (int j: lotto[i])
 			{
 				sumachyselRozigrashu = sumachyselRozigrashu + j;

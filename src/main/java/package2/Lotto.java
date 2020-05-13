@@ -8,7 +8,7 @@ public class Lotto {
 	public static void main(String[] args) {
 
 		// krok 1 - otrymaty vvedennja vid korystuvacha
-		String[] chyslaVidKorystuvacha = OtrymatyVvedennjaVidKorustuvacha();
+		String[] chyslaVidKorystuvacha = otrymatyVvedennjaVidKorustuvacha();
 
 		int iKilkistSpivpadin = 0;
 		int iKilkistRozigrashi = 0;
@@ -17,14 +17,14 @@ public class Lotto {
 			iKilkistRozigrashi++;
 
 			// krok 2 - provesty rozigrach (6 vypadkovyh chysel)
-			int[] tsejRozigrach = ProvestyRozigrach();
+			int[] tsejRozigrach = provestyRozigrach();
 
 			// krok 3 - pereviryty chysla vid korystuvacha na spivpadinnja
-			iKilkistSpivpadin = PerevirytyRezultat(chyslaVidKorystuvacha, tsejRozigrach);
+			iKilkistSpivpadin = perevirytyRezultat(chyslaVidKorystuvacha, tsejRozigrach);
 
 			if (iKilkistSpivpadin > 4) {
 				// krok 4 - vyvesty rezultat
-				String vsiChyslaRozigrachu = KonvertuvatyMasyvVTekst(tsejRozigrach);
+				String vsiChyslaRozigrachu = konvertuvatyMasyvVTekst(tsejRozigrach);
 				System.out.println("U " + iKilkistRozigrashi + " rozigrachi spivpalo (" + vsiChyslaRozigrachu + "): "
 						+ iKilkistSpivpadin);
 
@@ -32,7 +32,7 @@ public class Lotto {
 		}
 	}
 
-	public static String[] OtrymatyVvedennjaVidKorustuvacha() {
+	public static String[] otrymatyVvedennjaVidKorustuvacha() {
 
 		Scanner scan = new Scanner(System.in);
 
@@ -45,7 +45,7 @@ public class Lotto {
 		return strMasyvVvedenyhChysel;
 	}
 
-	public static int[] ProvestyRozigrach() {
+	public static int[] provestyRozigrach() {
 		int[] tsejRozigrach = new int[6];
 		Random r = new Random();
 		int iChysloRozigrashu = 0;
@@ -66,10 +66,7 @@ public class Lotto {
 		return tsejRozigrach;
 	}
 
-	public static int PerevirytyRezultat(String[] strMasyvVvedenyhChysel, int[] tsejRozigrach) {// korystuvacha:
-																								// {"1","24","17","45","11","7"}
-																								// tsejRozigrach: {5,
-																								// 35, 27, 11, 7, 1}
+	public static int perevirytyRezultat(String[] strMasyvVvedenyhChysel, int[] tsejRozigrach) {
 		int iKilkistSpivpadin = 0;
 		for (int k = 0; k < strMasyvVvedenyhChysel.length; k++) {
 			int chyslo = Integer.parseInt(strMasyvVvedenyhChysel[k]);
@@ -82,7 +79,7 @@ public class Lotto {
 		return iKilkistSpivpadin;
 	}
 
-	public static String KonvertuvatyMasyvVTekst(int[] chysla) {
+	public static String konvertuvatyMasyvVTekst(int[] chysla) {
 		String vsiChyslaRozigrachu = "";
 		for (int Chyslo : chysla) {
 			vsiChyslaRozigrachu = vsiChyslaRozigrachu + Chyslo + " ";
