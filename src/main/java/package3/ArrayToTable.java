@@ -9,18 +9,10 @@ public class ArrayToTable {
 		String[] krajina = {"Greece","France","United States","Greece","United Kingdom","Sweden","Germany","Belgium","France","France","Switzerland","Netherlands","United States","United States","Nazi Germany","Nazi Germany","Nazi Germany","Finland","Italy","United Kingdom","Switzerland","United Kingdom","Norway","Finland","Italy","Australia, Sweden","United States","Italy","Austria","Japan","France","Mexico","Japan","West Germany","Austria","Canada","United States","Soviet Union","Yugoslavia","United States","Canada","South Korea","France","Spain","Norway","United States","Japan","Australia","United States","Greece","Italy","China","Canada","United Kingdom","Nazi Russia","Brazil","South Korea","Japan","China"};
 		String[] misto = {"Athens","Paris","St. Louis","Athens","London","Stockholm","Berlin","Antwerp","Chamonix","Paris","St. Moritz","Amsterdam","Lake Placid","Los Angeles","Garmisch-Partenkirchen","Berlin","Garmisch-Partenkirchen","Helsinki","Cortina d'Ampezzo","London","St. Moritz","London","Oslo","Helsinki","Cortina d'Ampezzo","Melbourne, Stockholm","Squaw Valley","Rome","Innsbruck","Tokyo","Grenoble","Mexico City","Sapporo","Munich","Innsbruck","Montreal","Lake Placid","Moscow","Sarajevo","Los Angeles","Calgary","Seoul","Albertville","Barcelona","Lillehammer","Atlanta","Nagano","Sydney","Salt Lake City","Athens","Turin","Beijing","Vancouver","London","Sochi","Rio de Janeiro","Pyeongchang","Tokyo","Beijing"};
 		
-//		System.out.println("Index\tRik\tKrajina i tMisto");
-//		for (int i = 0; i < igry.length; i++)
-//		{
-//			System.out.print(i + "\t");
-//			System.out.print(igry[i] + "\t");
-//			System.out.print(krajina[i] + " - " + misto[i] + "\n");
-//			
-//			
-//		}
 		System.out.println("Vvedit rik: ");
 		Scanner skan = new Scanner(System.in);
 		int rik = skan.nextInt();
+		skan.close();
 		boolean znajdeno = false;
 		for (int j = 0; j < igry.length; j++)
 		{
